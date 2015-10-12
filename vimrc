@@ -18,11 +18,13 @@ set nobackup
 set nocindent
 set nosmartindent
 set autoindent
+set formatoptions+=ro
 "set indentkeys=
 
 " Text look & feel
 set nowrap
 set number
+set hlsearch
 
 " Nagivation in text buffer
 set iskeyword-=:        " lets to jump around Some::Thing expressions with w/b
