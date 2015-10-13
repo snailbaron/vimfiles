@@ -31,6 +31,9 @@ set hlsearch
 set iskeyword-=:        " lets to jump around Some::Thing expressions with w/b
 inoremap <S-Tab> <C-d>
 
+" File types detection
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+
 " Plugins configuration
 nnoremap <F4> :NERDTreeToggle<CR>
 nnoremap <Tab> <C-w>w
