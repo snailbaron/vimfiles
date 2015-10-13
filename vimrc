@@ -19,6 +19,7 @@ set nocindent
 set nosmartindent
 set autoindent
 set formatoptions+=ro
+set backspace=indent,eol,start
 "set indentkeys=
 
 " Text look & feel
