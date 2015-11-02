@@ -21,6 +21,7 @@ set nosmartindent
 set autoindent
 set formatoptions+=ro
 set backspace=indent,eol,start
+language english
 "set indentkeys=
 
 " Text look & feel
@@ -35,11 +36,18 @@ inoremap <S-Tab> <C-d>
 " File types detection
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
-" Plugins configuration
-nnoremap <F4> :NERDTreeToggle<CR>
-nnoremap <Tab> <C-w>w
+" Omni completion configuration
+set completeopt=longest,menuone
+inoremap <C-Space> <C-X><C-O>
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"      " select popup menu with Enter
+inoremap <expr> <Tab> pumvisible() ? "\<C-y>" : "\<C-g>u\<Tab>"     " select popup menu with Tab
 
-language english
+" Plugins configuration
+"""""""""""""""""""""""""
+
+" NERDTreeTabs
+nnoremap <F4> :NERDTreeTabsToggle<CR>
+let g:nerdtree_tabs_open_on_gui_startup = 0
 
 
 " Configuration by extension is done like this:
