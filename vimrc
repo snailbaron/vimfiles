@@ -3,6 +3,7 @@ colorscheme desert
 
 " Load plugins with Pathogen
 execute pathogen#infect()
+execute pathogen#helptags()
 
 " Load plugins by filetypes, but save my indent
 filetype on
