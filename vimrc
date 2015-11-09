@@ -48,6 +48,7 @@ inoremap <expr> <Tab> pumvisible() ? "\<C-y>" : "\<C-g>u\<Tab>"     " select pop
 " NERDTreeTabs
 nnoremap <F4> :NERDTreeTabsToggle<CR>
 let g:nerdtree_tabs_open_on_gui_startup = 0
+nnoremap <Tab> <C-w>w
 
 
 " Configuration by extension is done like this:
