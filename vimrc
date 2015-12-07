@@ -25,7 +25,6 @@ language english
 "set indentkeys=
 
 " Text look & feel
-set nowrap
 set number
 set hlsearch
 
