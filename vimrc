@@ -21,6 +21,7 @@ set nosmartindent
 set autoindent
 set formatoptions+=ro
 set backspace=indent,eol,start
+set encoding=utf-8
 language english
 "set indentkeys=
 
