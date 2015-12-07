@@ -4,12 +4,8 @@ set lines=55
 set columns=150
 set guifont=Consolas:h10:cDEFAULT
 
-" Cyrillics lmaps setting
-set keymap=russian-jcukenwin
-set iminsert=0
-set imsearch=0
+" Cyrillics lmaps setting (gui-related)
 highlight lCursor guifg=NONE guibg=Cyan
-set spelllang=ru_yo,en_us
 
 " Highlight line under cursor
 set cursorline

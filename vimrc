@@ -42,6 +42,12 @@ inoremap <C-Space> <C-X><C-O>
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"      " select popup menu with Enter
 inoremap <expr> <Tab> pumvisible() ? "\<C-y>" : "\<C-g>u\<Tab>"     " select popup menu with Tab
 
+" Cyrillics lmaps setting
+set keymap=russian-jcukenwin
+set iminsert=0
+set imsearch=0
+set spelllang=ru_yo,en_us
+
 " Plugins configuration
 """""""""""""""""""""""""
 
