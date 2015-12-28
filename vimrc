@@ -36,6 +36,7 @@ inoremap <S-Tab> <C-d>
 
 " File types detection
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+autocmd BufNewFile,BufRead *.petc set filetype=petc
 
 " Omni completion configuration
 set completeopt=longest,menuone
