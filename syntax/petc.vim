@@ -12,7 +12,7 @@ syn case match
 " Syntax elements
 syn match   petcTableDelim /^\s*-\+\s*$/
 syn match   petcNumber     /\<\(0x\x\+\|\d\+\)\>/
-syn keyword petcType       ENUM UINT TIME FLAG
+syn keyword petcType       ENUM UINT TIME FLAG CHAR
 syn match   petcComment    /#.*$/
 syn match   petcTableName  /^\s*\[\zs[A-Za-z0-9+:, ]\+\ze\]/
 syn match   petcDelim      /[|:]/
