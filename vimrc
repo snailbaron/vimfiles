@@ -38,6 +38,8 @@ inoremap <S-Tab> <C-d>
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 autocmd BufNewFile,BufRead *.petc set filetype=petc
 
+autocmd FileType petc set colorcolumn=121
+
 " Omni completion configuration
 set completeopt=longest,menuone
 inoremap <C-Space> <C-X><C-O>
