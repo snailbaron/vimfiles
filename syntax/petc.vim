@@ -11,37 +11,36 @@ syn case match
 
 " Syntax elements
 
-" Specification with table name and/or variations
-syn region  petcSpec       start=/\[/ end=/\]/ contains=petcSpecName
-syn match   petcSpecName   /[a-zA-Z0-9_+]*/ contained
+syn keyword petcKeyword STRUCT FIELD OF
+syn keyword petcType ENUM UINT TIME FLAG CHAR
+syn match petcName /[a-zA-Z0-9_+]\+/
+syn match petcDelim /[,|()]/
+syn match petcNumber /[0-9]\+/
+syn region petcDescription start=/\[/ end=/\]/ contains=petcDescriptionText
+syn match petcDescriptionText /[^\[\]]*/ contained
+syn match petcComment /#.*$/
 
-" Table delimiter
-syn match   petcTableDelim /^\s*-\+\s*$/
+"syn region petcTable start=/^\s*-\+\s*$/ end=/^\s*-\+\s*$/ contains=petcFieldDelim,petcSize,petcType,petcName,petcDescription
+"syn match petcFieldDelim /|/ contained
+"syn keyword petcType ENUM UINT TIME FLAG CHAR contained
+"syn match petcSize /[0-9]\+/ contained
+"syn region petcDescription start=/\[/ end=/\]/ contained
 
-syn match   petcNumber     /\<\(0x\x\+\|\d\+\)\>/
-syn keyword petcType       ENUM UINT TIME FLAG CHAR
-syn match   petcComment    /#.*$/
-syn match   petcDelim      /[|:]/
+hi link petcKeyword Keyword
+hi link petcName Identifier
+hi link petcDelim Delimiter
+hi link petcNumber Number
+hi link petcType Type
+hi link petcDescription Delimiter
+hi link petcDescriptionText String
+hi link petcComment Comment
 
-" Last column in table, contains description
-syn match petcLast /|[^|]*$/ contains=petcLastDelim
-syn match petcLastDelim /|/ contained
-
-syn match petcDescrContinue /^\s\+[^ |\[][^|]*$/
-
-" Default highlighting
-hi link petcTableDelim Delimiter
-hi link petcNumber     Number
-hi link petcType       Type
-hi link petcComment    Comment
-
-hi link petcSpecName   Identifier
-hi link petcSpec       Delimiter
-hi link petcDelim      Delimiter
-
-hi link petcDescrContinue String
-hi link petcLast       String
-hi link petcLastDelim  Delimiter
+"hi link petcTable Delimiter
+"hi link petcFieldDelim Delimiter
+"hi link petcType Type
+"hi link petcName Identifier
+"hi link petcSize Number
+"hi link petcDescription String
 
 " Define current syntax as PETool Config
 let b:current_syntax = "petc"
