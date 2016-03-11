@@ -1,5 +1,5 @@
 syntax enable
-colorscheme desert
+colorscheme vsdark
 
 " Load plugins with Pathogen
 execute pathogen#infect()
