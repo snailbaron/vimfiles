@@ -2,7 +2,11 @@ set guioptions-=m
 set guioptions-=T
 set lines=55
 set columns=150
-set guifont=Consolas:h10:cDEFAULT
+if has('win32')
+    set guifont=Consolas:h10:cDEFAULT
+elseif has('unix')
+    set guifont=DejaVu\ Sans\ Mono\ 11
+endif
 
 " Cyrillics lmaps setting (gui-related)
 highlight lCursor guifg=NONE guibg=Cyan

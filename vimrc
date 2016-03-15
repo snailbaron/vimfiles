@@ -23,7 +23,7 @@ set formatoptions+=ro
 set backspace=indent,eol,start
 set encoding=utf-8
 set ruler
-language english
+"language english
 "set indentkeys=
 
 " Text look & feel
