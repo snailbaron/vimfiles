@@ -33,6 +33,8 @@ set hlsearch
 " Nagivation in text buffer
 set iskeyword-=:        " lets to jump around Some::Thing expressions with w/b
 inoremap <S-Tab> <C-d>
+nmap j gj
+nmap k gk
 
 " File types detection
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
@@ -66,4 +68,3 @@ nnoremap <Tab> <C-w>w
 
 " Configuration by FileType is done like this:
 "autocmd FileType perl,c,cpp,autoit set indentkeys=
-
