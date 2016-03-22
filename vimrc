@@ -42,6 +42,10 @@ autocmd BufNewFile,BufRead *.petc set filetype=petc
 
 autocmd FileType petc set colorcolumn=121
 
+" Custom indent for XML-like files
+autocmd BufNewFile,BufRead *.xml set shiftwidth=2
+autocmd BufNewFile,BufRead *.xml set tabstop=2
+
 " Omni completion configuration
 set completeopt=longest,menuone
 inoremap <C-Space> <C-X><C-O>
